@@ -1,0 +1,198 @@
+/*  =========================================================================
+    FLEXBOX
+    ========================================================================= */
+
+
+
+    .flex {
+        display: flex;
+        &-col {
+            flex-direction: column;
+        }
+        &-row {
+            flex-direction: row;
+        }
+        &-left {
+            justify-content: flex-start;
+        }
+        &-right {
+            justify-content: flex-end;
+        }
+        &-center {
+            justify-content: center;
+        }
+        &-justify {
+            justify-content: space-between;
+        }
+        &-top {
+            align-items: flex-start;
+        }
+        &-bottom {
+            align-items: flex-end;
+        }
+        &-middle {
+            align-items: center;
+        }
+        &-stretch {
+            align-items: stretch;
+        }
+        &-wrap {
+            flex-wrap: wrap;
+        }
+        &-nowrap {
+            flex-wrap: nowrap;
+        }
+        @include mq($from: mobile) {
+            &-col-#{$global-mobile-postfix} {
+                flex-direction: column;
+            }
+            &-row-#{$global-mobile-postfix} {
+                flex-direction: row;
+            }
+            &-left-#{$global-mobile-postfix} {
+                justify-content: flex-start;
+            }
+            &-right-#{$global-mobile-postfix} {
+                justify-content: flex-end;
+            }
+            &-center-#{$global-mobile-postfix} {
+                justify-content: center;
+            }
+            &-justify-#{$global-mobile-postfix} {
+                justify-content: space-between;
+            }
+            &-top-at-#{$global-mobile-postfix} {
+                align-items: flex-start;
+            }
+            &-bottom-#{$global-mobile-postfix} {
+                align-items: flex-end;
+            }
+            &-middle-#{$global-mobile-postfix} {
+                align-items: center;
+            }
+            &-stretch-#{$global-mobile-postfix} {
+                align-items: stretch;
+            }
+            &-wrap-#{$global-mobile-postfix} {
+                flex-wrap: wrap;
+            }
+            &-nowrap-#{$global-mobile-postfix} {
+                flex-wrap: nowrap;
+            }
+        }
+        @include mq($from: tablet) {
+            &-col-#{$global-tablet-postfix} {
+                flex-direction: column;
+            }
+            &-row-#{$global-tablet-postfix} {
+                flex-direction: row;
+            }
+            &-left-#{$global-tablet-postfix} {
+                justify-content: flex-start;
+            }
+            &-right-#{$global-tablet-postfix} {
+                justify-content: flex-end;
+            }
+            &-center-#{$global-tablet-postfix} {
+                justify-content: center;
+            }
+            &-justify-#{$global-tablet-postfix} {
+                justify-content: space-between;
+            }
+            &-top-#{$global-tablet-postfix} {
+                align-items: flex-start;
+            }
+            &-bottom-#{$global-tablet-postfix} {
+                align-items: flex-end;
+            }
+            &-middle-#{$global-tablet-postfix} {
+                align-items: center;
+            }
+            &-stretch-#{$global-tablet-postfix} {
+                align-items: stretch;
+            }
+            &-wrap-#{$global-tablet-postfix} {
+                flex-wrap: wrap;
+            }
+            &-nowrap-#{$global-tablet-postfix} {
+                flex-wrap: nowrap;
+            }
+        }
+        @include mq($from: laptop) {
+            &-col-#{$global-laptop-postfix} {
+                flex-direction: column;
+            }
+            &-row-#{$global-laptop-postfix} {
+                flex-direction: row;
+            }
+            &-left-#{$global-laptop-postfix} {
+                justify-content: flex-start;
+            }
+            &-right-#{$global-laptop-postfix} {
+                justify-content: flex-end;
+            }
+            &-center-#{$global-laptop-postfix} {
+                justify-content: center;
+            }
+            &-justify-#{$global-laptop-postfix} {
+                justify-content: space-between;
+            }
+            &-top-#{$global-laptop-postfix} {
+                align-items: flex-start;
+            }
+            &-bottom-#{$global-laptop-postfix} {
+                align-items: flex-end;
+            }
+            &-middle-#{$global-laptop-postfix} {
+                align-items: center;
+            }
+            &-stretch-#{$global-laptop-postfix} {
+                align-items: stretch;
+            }
+            &-wrap-#{$global-laptop-postfix} {
+                flex-wrap: wrap;
+            }
+            &-nowrap-#{$global-laptop-postfix} {
+                flex-wrap: nowrap;
+            }
+        }
+        @include mq($from: desktop) {
+            &-col-#{$global-desktop-postfix} {
+                flex-direction: column;
+            }
+            &-row-#{$global-desktop-postfix} {
+                flex-direction: row;
+            }
+            &-left-#{$global-desktop-postfix} {
+                justify-content: flex-start;
+            }
+            &-right-#{$global-desktop-postfix} {
+                justify-content: flex-end;
+            }
+            &-center-#{$global-desktop-postfix} {
+                justify-content: center;
+            }
+            &-justify-#{$global-desktop-postfix} {
+                justify-content: space-between;
+            }
+            &-top-#{$global-desktop-postfix} {
+                align-items: flex-start;
+            }
+            &-bottom-#{$global-desktop-postfix} {
+                align-items: flex-end;
+            }
+            &-middle-#{$global-desktop-postfix} {
+                align-items: center;
+            }
+            &-stretch-#{$global-desktop-postfix} {
+                align-items: stretch;
+            }
+            &-wrap-#{$global-desktop-postfix} {
+                flex-wrap: wrap;
+            }
+            &-nowrap-#{$global-desktop-postfix} {
+                flex-wrap: nowrap;
+            }
+        }
+    
+    }

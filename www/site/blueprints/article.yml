@@ -1,0 +1,87 @@
+title: Article
+pages: false
+options:
+  preview: true
+  status: true
+  template: false
+  url: false
+  delete: true
+files: true
+fields:
+  previewfiles:
+    type: previewfiles
+  title:
+    label: Title
+    type:  text
+  line-a:
+    type: line
+  featuredimage:
+    extends: singleimage
+    label: Featured Image
+  line-b:
+    type: line
+  date:
+    label: Date
+    type: date
+  tags:
+    label: Tags
+    type: tags
+  categories:
+    label: Category
+    type: select 
+    options: query
+    query:
+      page: blog/categories
+      fetch: children
+      value: '{{uid}}'
+      text: '{{title}}'
+  author:
+    label: Author
+    type: user
+  line-c:
+    type: line
+  summary:
+    extends: plaintext
+    label: Summary
+  line-d:
+    type: line
+  contentblocks:
+    label: Content Blocks
+    type: builder
+    help: Use the buttons to add content blocks.
+    fieldsets:
+      text:
+        label: Text
+        snippet: contentblocks/text
+        fields:
+          text: richtext
+      heading:
+        label: Heading
+        snippet: contentblocks/heading
+        fields:
+          title:
+            label: Heading
+            type: text
+      subheading:
+        label: Subheading
+        snippet: contentblocks/subheading
+        fields:
+          title:
+            label: Heading
+            type: text
+      image:
+        label: Image
+        snippet: contentblocks/image
+        fields:
+          picture: singleimage
+          caption:
+            label: Caption Text
+            type: text
+      video:
+        label: Video
+        snippet: contentblocks/video
+        fields:
+          videolink:
+            label: Link
+            type: url
+          source: videosource

@@ -39,18 +39,14 @@
 
 @import "05-objects/aspect-ratio";
 @import "05-objects/frame";
-// @import "05-objects/grid";
-// @import "05-objects/gutter";
 @import "05-objects/hidden";
 @import "05-objects/wrapper";
 
 // 6. Components
 // @import "06-components/alert";
-// @import "06-components/bottombar";
 // @import "06-components/button";
 // @import "06-components/card";
 // @import "06-components/dropdown";
-// @import "06-components/facebook";
 // @import "06-components/forms";
 // @import "06-components/headings";
 // @import "06-components/icon";
@@ -59,24 +55,46 @@
 // @import "06-components/nav";
 // @import "06-components/responsive-menu";
 // @import "06-components/ribbon";
-// @import "06-components/sidebar";
-// @import "06-components/sitefooter";
-// @import "06-components/topbar";
 // @import "06-components/typography";
 
 
 // 7. Utilities
 
+@import "07-utilities/background-color";
+@import "07-utilities/background-position";
+@import "07-utilities/background-repeat";
+@import "07-utilities/background-size";
+@import "07-utilities/border-color";
+@import "07-utilities/border-style";
+@import "07-utilities/border-width";
+@import "07-utilities/box-shadow";
+@import "07-utilities/clear";
+@import "07-utilities/color";
+@import "07-utilities/display";
 @import "07-utilities/flex";
+@import "07-utilities/float";
+@import "07-utilities/font-family";
+@import "07-utilities/font-size";
+@import "07-utilities/font-style";
+@import "07-utilities/font-variant";
+@import "07-utilities/font-weight";
+
+@import "07-utilities/letter-spacing";
+@import "07-utilities/line-height";
 @import "07-utilities/margin";
 
 
-// 8. Exclusives
+@import "07-utilities/opacity";
+@import "07-utilities/order";
+@import "07-utilities/overflow";
+@import "07-utilities/padding";
+@import "07-utilities/position";
+@import "07-utilities/text-align";
+@import "07-utilities/text-decoration";
+@import "07-utilities/text-transform";
 
 
-
-// 9. Javascript
-// @import "09-javascript/collapsible";
-@import "09-javascript/dropdown";
+// 8. Javascript
+@import "08-javascript/dropdown";
 
 

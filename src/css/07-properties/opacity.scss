@@ -2,10 +2,10 @@
     OPACITY
     ========================================================================= */
 
-$local-opacity-settings: (
+$opacity-settings: (
     'responsive' : false,
     'hover'      : true,
-    'classname'  : 'opacity-',
+    'class'      : 'op-',
     'values': (
         '00' : 0,
         '02' : 0.2,
@@ -16,10 +16,4 @@ $local-opacity-settings: (
     )
 );
 
-@if global_variable_exists(global-opacity-settings) {
-
-    $opacity-settings: map-merge($local-opacity-settings, $global-opacity-settings);
-
-    @include writeClasses('opacity', $opacity-settings);
-
-}
+@include writeClasses('opacity', $opacity-settings);

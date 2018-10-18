@@ -2,10 +2,10 @@
     TEXT ALIGN
     ========================================================================= */
 
-$local-text-align-settings: (
+$text-align-settings: (
     'responsive' : true,
     'hover'      : false,
-    'classname'  : 'text-align-',
+    'class'      : 'ta-',
     'values': (
         'left'    : left,
         'right'   : right,
@@ -15,10 +15,4 @@ $local-text-align-settings: (
 );
 
 
-@if global_variable_exists(global-text-align-settings) {
-
-    $text-align-settings: map-merge($local-text-align-settings, $global-text-align-settings);
-
-    @include writeClasses('text-align', $text-align-settings);
-
-}
+@include writeClasses('text-align', $text-align-settings);

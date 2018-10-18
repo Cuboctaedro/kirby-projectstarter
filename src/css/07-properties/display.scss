@@ -2,10 +2,10 @@
     DISPLAY
     ========================================================================= */
 
-$local-display-settings: (
+$display-settings: (
     'responsive' : true,
     'hover'      : false,
-    'classname'  : 'display-',
+    'class'      : 'd-',
     'values': (
         'block'         : block,
         'inline'        : inline,
@@ -17,11 +17,4 @@ $local-display-settings: (
 );
 
 
-
-@if global_variable_exists(global-display-settings) {
-
-    $display-settings: map-merge($local-display-settings, $global-display-settings);
-
-    @include writeClasses('display', $display-settings);
-
-}
+@include writeClasses('display', $display-settings);

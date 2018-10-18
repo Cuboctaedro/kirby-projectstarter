@@ -1,0 +1,23 @@
+title: Categories
+pages:
+  template:
+    - category
+options:
+  preview: false
+  status: true
+  template: false
+  url: false
+  delete: true
+files: false
+fields:
+  hidebar:
+    type: hidebar
+  title:
+    label: Title
+    type:  text
+  pageindex:
+    label: Categories
+    type: index
+    options: children
+    columns:
+      title: Title

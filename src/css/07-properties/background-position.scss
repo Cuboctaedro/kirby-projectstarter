@@ -2,10 +2,10 @@
     BACKGROUND POSITION
     ========================================================================= */
 
-$local-background-position-settings: (
+$background-position-settings: (
     'responsive' : false,
     'hover'      : false,
-    'classname'  : 'background-position-',
+    'class'  : 'bg-pos-',
     'values': (
         'top'          : top center,
         'bottom'       : bottom center,
@@ -20,10 +20,4 @@ $local-background-position-settings: (
 );
 
 
-@if global_variable_exists(global-background-position-settings) {
-
-    $background-position-settings: map-merge($local-background-position-settings, $global-background-position-settings);
-
-    @include writeClasses('background-position', $background-position-settings);
-
-}
+@include writeClasses('background-position', $background-position-settings);

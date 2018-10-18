@@ -2,10 +2,10 @@
     ORDER
     ========================================================================= */
 
-$local-order-settings: (
+$order-settings: (
     'responsive' : true,
     'hover'      : false,
-    'classname'  : 'order-',
+    'class'      : 'order-',
     'values': (
         '-99' : -99,
         '-2'  : -2,
@@ -17,10 +17,4 @@ $local-order-settings: (
     )
 );
 
-@if global_variable_exists(global-order-settings) {
-
-    $order-settings: map-merge($local-order-settings, $global-order-settings);
-
-    @include writeClasses('order', $order-settings);
-
-}
+@include writeClasses('order', $order-settings);

@@ -2,19 +2,16 @@
     COLOR
     ========================================================================= */
 
-$local-color-settings: (
+$color-settings: (
     'responsive' : false,
     'hover'      : true,
-    'classname'  : 'color-',
-    'values': $global-color-values
+    'class'       : 'c-',
+    'values': (
+        'text': $global-text-color,
+        'background': $global-background-color,
+        'brand': $global-brand-color
+    )
 );
 
 
-
-@if global_variable_exists(global-color-settings) {
-
-    $color-settings: map-merge($local-color-settings, $global-color-settings);
-
-    @include writeClasses('color', $color-settings);
-
-}
+@include writeClasses('color', $color-settings);

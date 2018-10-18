@@ -1,0 +1,51 @@
+title: Page
+pages:
+  template:
+    - default
+options:
+  preview: true
+  status: true
+  template: false
+  url: false
+  delete: true
+files: true
+fields:
+  previewfiles:
+    type: previewfiles
+  title:
+    label: 
+      el: Τίτλος
+      en: Title
+    type:  text
+  contentblocks:
+    label: Content Blocks
+    type: builder
+    help: Use the buttons to add content blocks.
+    fieldsets:
+      text:
+        label: Text
+        snippet: contentblocks/text
+        fields:
+          text: richtext
+      heading:
+        label: Heading
+        snippet: contentblocks/heading
+        fields:
+          title:
+            label: Heading
+            type: text
+      subheading:
+        label: Subheading
+        snippet: contentblocks/subheading
+        fields:
+          title:
+            label: Heading
+            type: text
+      image:
+        label: Image
+        snippet: contentblocks/image
+        fields:
+          picture: singleimage
+          caption:
+            label: Caption Text
+            type: text

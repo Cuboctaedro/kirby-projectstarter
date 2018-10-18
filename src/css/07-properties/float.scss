@@ -2,10 +2,10 @@
     FLOAT
     ========================================================================= */
 
-$local-float-settings: (
+$float-settings: (
     'responsive' : true,
     'hover'      : false,
-    'classname'  : 'float-',
+    'class'      : 'float-',
     'values': ( 
         'left' : left,
         'right': right,
@@ -13,10 +13,4 @@ $local-float-settings: (
     )
 );
 
-@if global_variable_exists(global-float-settings) {
-
-    $float-settings: map-merge($local-float-settings, $global-float-settings);
-
-    @include writeClasses('float', $float-settings);
-
-}
+@include writeClasses('float', $float-settings);

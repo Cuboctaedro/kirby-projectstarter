@@ -1,7 +1,0 @@
-.c-sidebar {
-    @include mq($from: desktop) {
-        padding-left: rem($global-module * 3);
-        border-left: $global-border-width-md $global-border-style $global-border-color-medium;
-        height:100%;
-    }
-}

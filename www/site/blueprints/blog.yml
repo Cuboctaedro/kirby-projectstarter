@@ -1,0 +1,28 @@
+title: Blog
+pages:
+  template:
+    - article
+  build:
+    - title: Categories
+      uid: categories
+      template: categories
+options:
+  preview: true
+  status: true
+  template: false
+  url: false
+  delete: true
+files: true
+fields:
+  hidebar:
+    type: hidebar
+  title:
+    label: Title
+    type:  text
+  pageindex:
+    label: Posts
+    type: index
+    options: children
+    columns:
+      title: Title
+      date: Date

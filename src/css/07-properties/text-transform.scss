@@ -2,10 +2,10 @@
     TEXT TRASNFORM
     ========================================================================= */
 
-$local-text-transform-settings: (
+$text-transform-settings: (
     'responsive' : false,
     'hover'      : false,
-    'classname'  : 'text-transform-',
+    'class'      : 'ttr-',
     'values': (
         'capital': capitalize,
         'upper'  : uppercase,
@@ -15,10 +15,4 @@ $local-text-transform-settings: (
 );
 
 
-@if global_variable_exists(global-text-transform-settings) {
-
-    $text-transform-settings: map-merge($local-text-transform-settings, $global-text-transform-settings);
-
-    @include writeClasses('text-transform', $text-transform-settings);
-
-}
+@include writeClasses('text-transform', $text-transform-settings);

@@ -2,25 +2,21 @@
     FONT SIZE
     ========================================================================= */
 
-$local-font-size-settings: (
+$font-size-settings: (
     'responsive' : true,
     'hover'      : false,
-    'classname'  : 'font-size-',
-    'values': (
-        '12'  : 12px,
-        '14'  : 14px,
-        '16'  : 16px,
-        '18'  : 18px,
-        '24'  : 24px,
-        '32'  : 32px,
-        '36'  : 36px
+    'class'      : 'fs-',
+    'values'     : (
+        'xxs'  : $global-font-size-xxs,
+        'xs'   : $global-font-size-xs,
+        'sm'   : $global-font-size-sm,
+        'md'   : $global-font-size-md,
+        'lg'   : $global-font-size-lg,
+        'xl'   : $global-font-size-xl,
+        'xxl'  : $global-font-size-xxl,
+        'mega' : $global-font-size-mega,
+        'giga' :$global-font-size-giga
     )
 );
 
-@if global_variable_exists(global-font-size-settings) {
-
-    $font-size-settings: map-merge($local-font-size-settings, $global-font-size-settings);
-
-    @include writeClasses('font-size', $font-size-settings);
-
-}
+@include writeClasses('font-size', $font-size-settings, true);

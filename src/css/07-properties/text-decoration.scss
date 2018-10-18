@@ -2,10 +2,10 @@
     TEXT DECORATION
     ========================================================================= */
 
-$local-text-decoration-settings: (
+$text-decoration-settings: (
     'responsive' : false,
     'hover'      : true,
-    'classname'  : 'text-decoration-',
+    'class'      : 'tdec-',
     'values': (
         'none'    : none,
         'under'   : underline,
@@ -14,10 +14,4 @@ $local-text-decoration-settings: (
 );
 
 
-@if global_variable_exists(global-text-decoration-settings) {
-
-    $text-decoration-settings: map-merge($local-text-decoration-settings, $global-text-decoration-settings);
-
-    @include writeClasses('text-decoration', $text-decoration-settings);
-
-}
+@include writeClasses('text-decoration', $text-decoration-settings);

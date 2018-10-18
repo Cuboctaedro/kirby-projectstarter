@@ -1,0 +1,11 @@
+title: Site
+pages:
+  template:
+    - default
+files: true
+fields:
+  previewfiles:
+    type: previewfiles
+  title:
+    label: Title
+    type:  text

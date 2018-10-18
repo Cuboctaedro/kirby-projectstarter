@@ -2,20 +2,14 @@
     FONT STYLE
     ========================================================================= */
 
-$local-font-style-settings: (
+$font-style-settings: (
     'responsive' : false,
     'hover'      : false,
-    'classname'  : 'font-style-',
+    'class'  : 'fst-',
     'values': (
         'italic'  : italic,
         'normal'  : normal
     )
 );
 
-@if global_variable_exists(global-font-style-settings) {
-
-    $font-style-settings: map-merge($local-font-style-settings, $global-font-style-settings);
-
-    @include writeClasses('font-style', $font-style-settings);
-
-}
+@include writeClasses('font-style', $font-style-settings);

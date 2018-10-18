@@ -2,18 +2,18 @@
     BACKGROUND COLOR
     ========================================================================= */
 
-$local-background-color-settings: (
+$background-color-settings: (
     'responsive' : false,
     'hover'      : true,
-    'classname'  : 'background-color-',
-    'values': $global-color-values
+    'class'  : 'bg-',
+    'values': (
+        'text': $global-text-color,
+        'background': $global-background-color,
+        'brand': $global-brand-color
+    )
 );
 
 
-@if global_variable_exists(global-background-color-settings) {
 
-    $background-color-settings: map-merge($local-background-color-settings, $global-background-color-settings);
+@include writeClasses('background-color', $background-color-settings);
 
-    @include writeClasses('background-color', $background-color-settings);
-
-}
