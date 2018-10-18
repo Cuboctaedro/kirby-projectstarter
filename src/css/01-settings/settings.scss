@@ -1,0 +1,152 @@
+/*  =========================================================================
+    SETTINGS
+    ========================================================================= */
+
+// Module
+
+$global-module : 8px;
+
+$global-gutter-mobile: $global-module * 2;
+$global-gutter-desktop: $global-module * 3;
+
+// Media Queries
+
+$mq-breakpoints: (
+    mobile:  480px,
+    tablet:  720px,
+    laptop:  1024px,
+    desktop: 1240px
+);
+
+$global-mobile-postfix: \@mob;
+$global-tablet-postfix: \@tab;
+$global-laptop-postfix: \@lap;
+$global-desktop-postfix: \@desk;
+
+$global-media-queries: (
+    '\@mob': _get($mq-breakpoints, 'mobile'),
+    '\@tab': _get($mq-breakpoints, 'tablet'),
+    '\@lap': _get($mq-breakpoints, 'laptop'),
+    '\@desk': _get($mq-breakpoints, 'desktop')
+);
+
+
+$global-wrapper-width-smallest: 336px;
+$global-wrapper-width-phone: 384px;
+$global-wrapper-width-tablet: 576px;
+$global-wrapper-width-laptop: 864px;
+$global-wrapper-width-desktop: 1152px;
+
+
+// Colors
+
+$global-text-color : #333333;
+
+$global-background-color: #ffffff;
+
+$global-brand-color: #3ab07e;
+
+
+$global-warning-color: #FFBD2B;
+$global-danger-color: #DE3416;
+$global-success-color: #35BD36;
+
+
+// Bourbon
+
+$bourbon: (
+    "contrast-switch-dark-color": $global-text-color,
+    "contrast-switch-light-color": $global-background-color,
+    "global-font-file-formats": ("ttf", "woff2", "woff"),
+    "modular-scale-base": 10px,
+    "modular-scale-ratio": $major-third,
+    "rails-asset-pipeline": false,
+);
+
+
+// Typography
+
+$global-font-family-text: (
+    "schnebel-sans-pro", 
+    "Calibri", 
+    "Candara", 
+    "Segoe", 
+    "Segoe UI", 
+    "Optima", 
+    "Arial", 
+    "sans-serif"
+);
+
+$global-font-family-titles: (
+    "ropa-soft-pro", 
+    "Franklin Gothic Medium", 
+    "Franklin Gothic", 
+    "Arial", 
+    "sans-serif"
+);
+
+
+$global-font-size-xxs: 10px;
+$global-font-size-xs: 12px;
+$global-font-size-sm: 14px;
+$global-font-size-md: 16px;
+$global-font-size-lg: 18px;
+$global-font-size-xl: 24px;
+$global-font-size-xxl: 30px;
+$global-font-size-mega: 36px;
+$global-font-size-giga: 48px;
+
+
+$global-line-height-solid: 1;
+$global-line-height-dense: 1.2;
+$global-line-height-text: 1.5;
+$global-line-height-loose: 1.8;
+
+
+
+// Box shadows
+
+$global-box-shadow-xs : (
+    0 1px 3px rgba(0,0,0,0.12), 
+    0 1px 2px rgba(0,0,0,0.24)
+);
+$global-box-shadow-sm : (
+    0 3px 6px rgba(0,0,0,0.16), 
+    0 3px 6px rgba(0,0,0,0.23)
+);
+$global-box-shadow-md : (
+    0 10px 20px rgba(0,0,0,0.19), 
+    0 6px 6px rgba(0,0,0,0.23)
+);
+$global-box-shadow-lg : (
+    0 14px 28px rgba(0,0,0,0.25), 
+    0 10px 10px rgba(0,0,0,0.22)
+);
+$global-box-shadow-xl : (
+    0 19px 38px rgba(0,0,0,0.30), 
+    0 15px 12px rgba(0,0,0,0.22)
+);
+
+
+// Transitions
+
+$global-transition-speed-fast: 0.2s;
+$global-transition-speed-medium: 0.4s;
+$global-transition-speed-slow: 0.6s;
+$global-transition-function: ease-out;
+
+
+// Borders
+$global-border-style: solid;
+$global-border-width-md: 1px;
+$global-border-width-fat: 4px;
+
+$global-border-color-light: shade($global-background-color , 8%);
+$global-border-color-medium: shade($global-background-color , 12%);
+$global-border-color-dark: shade($global-background-color , 16%);
+
+
+// Links
+$global-link-color: $global-brand-color;
+$global-link-hover-color: tint($global-brand-color, 20%);
+$global-link-hover-background: tint($global-text-color, 85%);

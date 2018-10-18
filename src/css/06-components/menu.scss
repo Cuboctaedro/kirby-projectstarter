@@ -1,0 +1,43 @@
+
+
+$menu-color: $global-link-color;
+$menu-hover-color: $global-link-hover-color;
+$menu-border-style: $global-border-style;
+$menu-border-width: $global-border-width-md;
+$menu-border-color: $global-border-color-medium;
+$menu-hover-background: $global-link-hover-background;
+
+
+.c-menu {
+    display: flex;
+    flex-direction: column;
+    &__link {
+        display:block;
+        line-height: 2;
+        color: $menu-color;
+        transition: color $global-transition-speed-medium $global-transition-function;
+        &:hover {
+            color: $menu-hover-color;
+        }
+        &.is-active {
+            color: shade($menu-color, 30%);
+            &:hover {
+                color: $menu-color;
+            }
+        }
+    }
+    &--divider li a {
+        line-height: 1.5;
+        padding-top: rem($global-module);
+        border-top: $menu-border-width $menu-border-style $menu-border-color;
+        padding-bottom: rem($global-module);
+        background-color: transparent;
+        transition: background-color $global-transition-speed-medium $global-transition-function;
+        &:hover {
+            background-color: $menu-hover-background;
+        }
+    }
+    &--divider li:last-child a {
+        border-bottom: $menu-border-width $menu-border-style $menu-border-color;
+    }
+}

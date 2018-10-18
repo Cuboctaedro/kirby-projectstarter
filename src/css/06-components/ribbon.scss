@@ -1,0 +1,42 @@
+/*  =========================================================================
+    RIBBON
+    ========================================================================= */
+
+
+
+$ribbon-width : 170;
+$ribbon-height: 40;
+$ribbon-side : _sqrt(($ribbon-width * $ribbon-width)/2);
+
+$ribbon-shadow: $global-box-shadow-sm;
+$ribbon-font-family: $global-font-family-titles;
+
+
+.c-ribbon {
+    position: absolute;
+    top: rem(($ribbon-side - $ribbon-height) * 1px);
+    left: 0;
+    width: rem($ribbon-width * 1px);
+    height: rem($ribbon-height * 1px);
+    text-align: center;
+    line-height: rem($ribbon-height * 1px);
+    transform: rotate(-45deg);
+    transform-origin: bottom left;
+
+    box-shadow: $ribbon-shadow;
+
+    font-family: $ribbon-font-family;
+    text-transform: uppercase;
+    letter-spacing: 1px; 
+    &__container {
+        position: relative;
+    }
+    &--warning {
+        background-color: shade($global-warning-color, 15%);
+        color: contrast-switch( shade($global-warning-color, 15%) );
+    }
+    &--danger {
+        background-color: shade($global-danger-color, 15%);
+        color: contrast-switch( shade($global-danger-color, 15%) );
+    }
+}

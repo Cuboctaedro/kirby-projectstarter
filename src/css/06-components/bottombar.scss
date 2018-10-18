@@ -1,0 +1,27 @@
+
+
+.c-bottombar {
+    width:100%;
+    display: flex;
+    height: rem($global-module * 7);
+    background-color: shade($global-brand-color, 80%);
+    color: shade($global-background-color, 20%);
+    padding-top: rem($global-module * 2);
+    padding-bottom: rem($global-module * 2);
+    a {
+        color: shade($global-background-color, 10%);
+        &:before {
+            background-color: shade($global-background-color, 10%);
+        }
+        &:hover {
+            color: $global-background-color;
+            &:before {
+                background-color: $global-background-color;
+            }
+        }
+    }
+    &__item {
+        margin-right: rem($global-module * 2);
+        font-size: rem($global-font-size-sm);
+    }
+}

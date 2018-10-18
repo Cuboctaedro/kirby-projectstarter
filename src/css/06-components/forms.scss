@@ -1,0 +1,167 @@
+/*  =========================================================================
+    FORMS
+    ========================================================================= */
+
+
+$form-border-color : shade($global-background-color , 12%);
+$form-focus-border-color: shade($global-background-color , 30%);
+$form-input-height: $global-module * 5;
+$form-input-padding: $global-module;
+$form-input-color: $global-text-color;
+
+$form-input-background: shade($global-background-color , 3%);
+$form-focus-input-background: $global-background-color;
+
+$form-label-font-size: $global-font-size-md;
+$form-label-line-height: $global-line-height-dense;
+$form-label-color: $global-text-color;
+
+$form-message-font-size: $global-font-size-sm;
+$form-message-line-height: $global-line-height-text;
+$form-message-color: tint($global-text-color, 25%);
+
+$form-checkbox-size: $global-module * 3;
+
+
+.c-input {
+    border-width: 1px;
+    border-style: solid;
+    border-color: $form-border-color;
+    height: rem($form-input-height);
+    padding: rem($form-input-padding);
+    display: block;
+    color: $form-input-color;
+    width:100%;
+    background-color: $form-input-background;
+    box-shadow: none;
+    transition: border-color $global-transition-speed-medium $global-transition-function,background-color $global-transition-speed-medium $global-transition-function;
+    &:focus {
+        border-color: $form-focus-border-color;
+        background-color: $form-focus-input-background;
+    }
+    &--error {
+        border-left-width: 10px;
+        border-color: $global-danger-color;
+    }
+    &--success {
+        border-left-width: 10px;
+        border-color: $global-success-color;
+    }
+}
+.c-textarea {
+    border-width: 1px;
+    border-style: solid;
+    border-color: $form-border-color;
+    min-height: rem($global-module * 25);
+    padding: rem($form-input-padding);
+    color: $form-input-color;
+    display: block;
+    width: 100%;
+    background-color: $form-input-background;
+    box-shadow: none;
+    transition: border-color $global-transition-speed-medium $global-transition-function,background-color $global-transition-speed-medium $global-transition-function;
+    &:focus {
+        border-color: $form-focus-border-color;
+        background-color: $form-focus-input-background;
+    }
+    &--error {
+        border-left-width: 10px;
+        border-color: $global-danger-color;
+    }
+    &--success {
+        border-left-width: 10px;
+        border-color: $global-success-color;
+    }
+}
+
+.c-formlabel {
+    font-size: rem($form-label-font-size);
+    line-height: $form-label-line-height;
+    margin-bottom: rem($global-module);
+    color: $form-label-color;
+
+}
+.c-form-message {
+    font-size: rem($form-message-font-size);
+    line-height: $form-message-line-height;
+    margin-top: rem($global-module);
+    &--required {
+        color: $form-message-color;
+    }
+    &--danger {
+        color: $global-danger-color;
+    }
+    &--success {
+        color: $global-success-color;
+    }
+
+}
+.c-checkbox {
+    position: relative;
+    overflow: hidden;
+    &__label {
+        display: block;
+        cursor:pointer;
+        &:before {
+            content: '';
+            display: inline-block;
+            @include size(rem($form-checkbox-size));
+            border-width: 1px;
+            border-style: solid;
+            border-color: $form-border-color;
+            background-color: $form-input-background;
+            margin-right: rem($global-module);
+            vertical-align: text-bottom;
+            transition: border-color $global-transition-speed-medium $global-transition-function,background-color $global-transition-speed-medium $global-transition-function;
+        }
+    }
+    &__input {
+        position: absolute;
+        width: 20px;
+        left:-20px;
+        &:focus + span:before {
+            border-color: $form-focus-border-color;
+        }
+        &:checked + span:before {
+            border-color: shade($global-success-color, 10%);
+            background-color: shade($global-success-color, 10%);
+        }
+    }
+}
+
+.c-select {
+    appearance: none;
+    -moz-appearance: none;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $form-border-color;
+    height: rem($form-input-height);
+    padding-top: rem($form-input-padding);
+    padding-bottom: rem($form-input-padding);
+    padding-left: rem($form-input-padding);
+    padding-right: rem($global-module * 5);
+    background-image: url('/assets/images/arrow-down.png');
+    background-position: right;
+    display: block;
+    background-color: $form-input-background;
+    box-shadow: none;
+    color: $form-input-color;
+    transition: border-color $global-transition-speed-medium $global-transition-function,background-color $global-transition-speed-medium $global-transition-function;
+    option {
+        background-color: $form-input-background;
+        font-weight: 400;
+        color: $form-input-color;
+    }
+    &:hover,
+    &:focus {
+        border-color: $form-focus-border-color;
+        background-color: $form-focus-input-background;
+    }
+    &--error {
+        border-color: $global-danger-color;
+    }
+    &--success {
+        border-color: $global-success-color;
+    }
+
+}

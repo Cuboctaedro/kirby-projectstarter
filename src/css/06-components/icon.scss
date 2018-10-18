@@ -1,0 +1,35 @@
+
+$icon-size-md: $global-module * 3;
+$icon-size-lg: $global-module * 4;
+
+$icon-default-color: $global-text-color;
+$icon-default-hover-color: $global-brand-color;
+
+.c-icon {
+    @include size($icon-size-md)
+    svg {
+        fill: currentColor;
+        transition: fill $global-transition-speed-medium $global-transition-function;
+    }
+    &--hover:hover svg {
+        fill: $icon-default-hover-color;
+    }
+    &--twitter svg {
+        fill: #1DA1F2;
+    }
+    &--twitter:hover svg {
+        fill: tint(#1DA1F2, 20%);
+    }
+    &--facebook svg {
+        fill: #3B5998;
+    }
+    &--facebook:hover svg {
+        fill: tint(#3B5998, 20%);
+    }
+    &--pinterest svg {
+        fill: #BD081C;
+    }
+    &--pinterest:hover svg {
+        fill: tint(#BD081C, 20%);
+    }
+}

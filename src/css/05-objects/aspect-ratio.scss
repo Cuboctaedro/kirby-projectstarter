@@ -1,0 +1,86 @@
+/*  =========================================================================
+    ASPECT RATIO
+    ========================================================================= */
+
+
+$aspect-ratio-background: tint($global-text-color, 70%);  //Background applied when image is missing.
+
+
+.o-ratio {
+    overflow: hidden;
+    height: 0;
+    background-size: cover;
+    background-position: center;
+    background-color: $aspect-ratio-background;
+    &--square {
+        padding-top:100%;
+    }
+    &--gold {
+        padding-top:61.8%;
+    }
+    &--silver {
+        padding-top:41.42%;
+    }
+    &--3by4 {
+        padding-top:75%;
+    }
+    &__container {
+        overflow: hidden;
+    }
+    @include mq($from: mobile) {
+        &--square-\@mob {
+            padding-top:100%;
+        }
+        &--gold-\@mob {
+            padding-top:61.8%;
+        }
+        &--silver-\@mob {
+            padding-top:41.42%;
+        }
+        &--3by4-\@mob {
+            padding-top:75%;
+        }
+    }
+    @include mq($from: tablet) {
+        &--square-\@tab {
+            padding-top:100%;
+        }
+        &--gold-\@tab {
+            padding-top:61.8%;
+        }
+        &--silver-\@tab {
+            padding-top:41.42%;
+        }
+        &--3by4-\@tab {
+            padding-top:75%;
+        }
+    }
+    @include mq($from: laptop) {
+        &--square-\@lap {
+            padding-top:100%;
+        }
+        &--gold-\@lap {
+            padding-top:61.8%;
+        }
+        &--silver-\@lap {
+            padding-top:41.42%;
+        }
+        &--3by4-\@lap {
+            padding-top:75%;
+        }
+    }
+    @include mq($from: desktop) {
+        &--square-\@desk {
+            padding-top:100%;
+        }
+        &--gold-\@desk {
+            padding-top:61.8%;
+        }
+        &--silver-\@desk {
+            padding-top:41.42%;
+        }
+        &--3by4-\@desk {
+            padding-top:75%;
+        }
+    }
+}

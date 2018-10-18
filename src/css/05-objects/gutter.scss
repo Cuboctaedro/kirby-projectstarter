@@ -1,0 +1,74 @@
+/*  =========================================================================
+    GUTTERS
+    ========================================================================= */
+
+
+
+
+.o-gutter {
+    padding-left: rem($global-gutter-mobile /2);
+    padding-right: rem($global-gutter-mobile /2);
+    @include mq($from: laptop) {
+        padding-left: rem($global-gutter-desktop /2);
+        padding-right: rem($global-gutter-desktop /2);
+    }
+}
+
+.o-gutter-left {
+    padding-left: rem($global-gutter-mobile /2);
+    @include mq($from: laptop) {
+        padding-left: rem($global-gutter-desktop /2);
+    }
+}
+
+.o-gutter-right {
+    padding-right: rem($global-gutter-mobile /2);
+    @include mq($from: laptop) {
+        padding-right: rem($global-gutter-desktop /2);
+    }
+}
+
+@include mq($from: mobile) {
+    .o-gutter-left-\@mob {
+        padding-left: rem($global-gutter-mobile /2);
+        @include mq($from: laptop) {
+            padding-left: rem($global-gutter-desktop /2);
+        }
+    }
+    .o-gutter-right-\@mob {
+        padding-right: rem($global-gutter-mobile /2);
+        @include mq($from: laptop) {
+            padding-right: rem($global-gutter-desktop /2);
+        }
+    }   
+}
+@include mq($from: tablet) {
+    .o-gutter-left-\@tab {
+        padding-left: rem($global-gutter-mobile /2);
+        @include mq($from: laptop) {
+            padding-left: rem($global-gutter-desktop /2);
+        }
+    }
+    .o-gutter-right-\@tab {
+        padding-right: rem($global-gutter-mobile /2);
+        @include mq($from: laptop) {
+            padding-right: rem($global-gutter-desktop /2);
+        }
+    }   
+}
+@include mq($from: laptop) {
+    .o-gutter-left-\@lap {
+        padding-left: rem($global-gutter-desktop /2);
+    }
+    .o-gutter-right-\@lap {
+        padding-right: rem($global-gutter-desktop /2);
+    }   
+}
+@include mq($from: desktop) {
+    .o-gutter-left-\@desk {
+        padding-left: rem($global-gutter-desktop /2);
+    }
+    .o-gutter-right-\@desk {
+        padding-right: rem($global-gutter-desktop /2);
+    }   
+}

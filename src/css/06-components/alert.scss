@@ -1,0 +1,28 @@
+/*  =========================================================================
+    ALERTS
+    ========================================================================= */
+
+$alert-padding: $global-module;
+
+
+.c-message {
+    padding: rem($alert-padding);
+    border-width: 1px;
+    border-style: solid;
+    &--warn {
+        border-color: $global-warning-color;
+        color: shade($global-warning-color, 50%);
+        background-color: tint($global-warning-color, 80%);
+    }
+    &--danger {
+        border-color: $global-danger-color;
+        color: shade($global-danger-color, 50%);
+        background-color: tint($global-danger-color, 80%);
+    }
+    &--success {
+        border-color: $global-success-color;
+        color: shade($global-success-color, 50%);
+        background-color: tint($global-success-color, 80%);
+    }
+
+}

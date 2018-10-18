@@ -1,0 +1,74 @@
+/*  =========================================================================
+    HEADINGS
+    ========================================================================= */
+
+
+$headings-font-family: $global-font-family-titles;
+$headings-line-height: $global-line-height-dense;
+$heading-1-font-size: $global-font-size-lg;
+$heading-2-font-size: $global-font-size-xl;
+$heading-3-font-size: $global-font-size-xl;
+$heading-4-font-size: $global-font-size-xxl;
+
+
+.c-heading {
+    &-1 {
+        font-family: $headings-font-family;
+        line-height: $headings-line-height;
+        font-size: rem($heading-1-font-size);
+        font-weight: 700;
+        color: $global-text-color;
+        a {
+            color: $global-text-color;
+            &:hover {
+                color: $global-link-color;
+            }
+        }
+    }
+    &-2 {
+        font-family: $headings-font-family;
+        line-height: $headings-line-height;
+        font-size: rem($heading-2-font-size);
+        font-weight: 400;
+        color: $global-text-color;
+        a {
+            color: $global-text-color;
+            &:hover {
+                color: $global-link-color;
+            }
+        }
+    }
+    &-3 {
+        font-family: $headings-font-family;
+        line-height: $headings-line-height;
+        font-size: rem($heading-2-font-size);
+        font-weight: 700;
+        @include mq($from: tablet) {
+            font-size: rem($heading-3-font-size);
+            font-weight: 700;
+        }
+        a {
+            color: $global-text-color;
+            &:hover {
+                color: $global-link-color;
+            }
+        }
+    }
+    &-4 {
+        font-family: $headings-font-family;
+        line-height: $headings-line-height;
+        font-size: rem($heading-3-font-size);
+        @include mq($from: tablet) {
+            font-size: rem($heading-4-font-size);
+        }
+        font-weight: 400;
+        color: $global-text-color;
+        a {
+            color: $global-text-color;
+            &:hover {
+                color: $global-link-color;
+            }
+        }
+    }
+}
+

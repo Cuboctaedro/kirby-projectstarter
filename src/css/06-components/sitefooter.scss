@@ -1,0 +1,9 @@
+
+
+
+.c-sitefooter {
+    background-color: tint($global-brand-color, 50%);
+    color: contrast-switch(tint($global-brand-color, 50%));
+    margin-top: rem($global-module * 9);
+    padding-top: rem($global-module * 9);
+}

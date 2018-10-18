@@ -1,0 +1,41 @@
+/*  =========================================================================
+    NAV
+    ========================================================================= */
+
+$nav-spacing: $global-module * 2;
+$nav-divider-color: $global-border-color-medium;
+$nav-classname: c-nav ;
+
+.#{$nav-classname} {
+    display: flex;
+    align-items: center;
+    &__label {
+        flex-grow: 0;
+    }
+    &__list {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+    }
+    &--spacing {
+        .#{$nav-classname}__label {
+            margin-right: rem($nav-spacing);
+        }
+        .#{$nav-classname}__list li {
+            margin-right: rem($nav-spacing);
+        }
+    }
+    &--divider {
+        .#{$nav-classname}__list li {
+            line-height: 2;
+            padding-right: rem($global-module);
+            border-right: 1px solid $nav-divider-color;
+            margin-right: rem($global-module);
+        }
+        .#{$nav-classname}__list li:last-child {
+            padding-right: 0;
+            border-right: none;
+            margin-right: 0;
+        }
+    }
+}

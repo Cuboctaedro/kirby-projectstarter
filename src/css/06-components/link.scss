@@ -1,0 +1,45 @@
+/*  =========================================================================
+    LINK
+    ========================================================================= */
+
+
+$link-color: $global-link-color;
+$link-hover-color: $global-link-hover-color;
+
+$link-font-family: $global-font-family-titles;
+
+
+.c-link {
+    font-family: $link-font-family;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    &--text {
+        color: $link-color;
+        display: inline;
+        position: relative;
+        overflow: hidden;
+        transition: color $global-transition-speed-medium $global-transition-function;
+        padding-bottom: 2px;
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 100%;
+            bottom: 0;
+            background-color: $link-color;
+            height: 1px;
+            z-index:-1;
+            transition: right $global-transition-speed-slow $global-transition-function, background-color $global-transition-speed-medium $global-transition-function;
+        }
+        &:hover,
+        &:focus,
+        &:active {
+            color: $link-hover-color;
+            &:before {
+                background-color: $link-hover-color;
+                right: 0;
+                z-index: 1;
+            }
+        }
+    }
+}

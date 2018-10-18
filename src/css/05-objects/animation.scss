@@ -1,0 +1,15 @@
+.o-fade {
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+    animation-name: animation_fade ; 
+}
+
+@keyframes animation_fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

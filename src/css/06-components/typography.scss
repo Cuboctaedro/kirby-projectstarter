@@ -1,0 +1,126 @@
+/*  =========================================================================
+    TYPOGRAPHY
+    ========================================================================= */
+
+$text-color-dark : shade($global-text-color, 70%);
+$text-color-normal : $global-text-color;
+$text-color-light : tint($global-text-color, 20%);
+$text-color-x-light : tint($global-text-color, 50%);;
+$text-color-link: $global-link-color;
+$text-color-link-hover: $global-link-hover-color;
+
+$text-font-size-small: $global-font-size-sm;
+$text-line-height: $global-line-height-text;
+$text-font-size-normal: $global-font-size-md;
+
+
+.c-text {
+    font-size: rem($text-font-size-small);
+    line-height: $text-line-height;
+    color: $text-color-normal;
+    @include mq($from: tablet) {
+        font-size: rem($text-font-size-normal);
+    }
+    p {
+        margin-bottom: rem($global-module * 2);
+        @include mq($from: tablet) {
+            margin-bottom: rem($global-module * 3);
+        }
+    }
+    p:last-child {
+        margin-bottom: 0;
+    }
+    h2 {
+        @extend .c-heading-2 ;
+        color: $text-color-link;
+        margin-bottom: rem($global-module * 1);
+        @include mq($from: tablet) {
+            margin-bottom: rem($global-module * 2);
+        }
+    }
+    h3 {
+        @extend .c-heading-1 ;
+        color: $text-color-dark;
+        margin-bottom: rem($global-module * 1);
+        @include mq($from: tablet) {
+            margin-bottom: rem($global-module * 2);
+        }
+    }
+    a {
+        color: $text-color-link;
+        transition: color $global-transition-speed-medium $global-transition-function, text-decoration $global-transition-speed-medium $global-transition-function;
+        &:hover {
+            color: $text-color-link-hover;
+            text-decoration: underline;
+        }
+    }
+    ol {
+        list-style-type: decimal;
+        list-style-position: inside;
+        li {
+            display: list-item;
+        }
+    }
+}
+
+.c-smalltext {
+    font-size: rem($text-font-size-small);
+    line-height: $text-line-height;
+    color: $text-color-normal;
+    p {
+        margin-bottom: rem($global-module * 1);
+    }
+    p:last-child {
+        margin-bottom: 0;
+    }
+    h2 {
+        @extend .c-heading-1 ;
+        color: $text-color-dark;
+    }
+    h3 {
+        @extend .c-heading-1 ;
+        color: $text-color-dark;
+    }
+    a {
+        color: $text-color-link;
+        transition: color $global-transition-speed-medium $global-transition-function, text-decoration $global-transition-speed-medium $global-transition-function;
+        &:hover {
+            color: $text-color-link-hover;
+            text-decoration: underline;
+        }
+    }
+}
+
+.c-date {
+    display: block;
+    font-size: rem($global-font-size-xs);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: tint($global-text-color, 30%);
+}
+
+.c-author {
+    display: block;
+    font-size: rem($global-font-size-sm);
+    font-style: italic;
+    color: tint($global-text-color, 30%);
+}
+.c-caption {
+    font-size: rem($global-font-size-sm);
+    font-style: italic;
+}
+.c-label {
+    font-weight:400;
+    font-size: rem($global-font-size-sm);
+    color: tint($global-text-color, 20%);
+}
+.c-listlabel {
+    font-weight:400;
+    font-size: rem($global-font-size-xxs);
+    color: tint($global-text-color, 20%);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: rem($global-module * 1.5);
+    margin-bottom: rem($global-module * 0.5);
+    border-top: $global-border-width-md $global-border-style $global-border-color-light;
+}

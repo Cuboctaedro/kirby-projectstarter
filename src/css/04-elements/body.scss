@@ -1,0 +1,18 @@
+/*  =========================================================================
+    BODY
+    ========================================================================= */
+
+$body-font-size-phone: $global-font-size-sm;
+$body-font-size-normal: $global-font-size-md;
+$body-line-height: $global-line-height-text;
+$body-font-family: $global-font-family-text;
+
+body {
+    min-height:101%;
+    font-size: rem($body-font-size-phone);
+    line-height: $body-line-height;
+    @include mq($from: mobile) {
+        font-size: rem($body-font-size-normal);
+    }
+    font-family: $body-font-family;
+}

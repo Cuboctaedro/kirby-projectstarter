@@ -1,0 +1,62 @@
+/*  =========================================================================
+    CARD
+    ========================================================================= */
+
+
+$card-background: $global-background-color;
+$card-border-color: $global-border-color-medium;
+$card-divider-color: $global-border-color-light;
+$card-border-radius: 4px;
+
+$card-classname: c-card ;
+
+// CARD COMPONENT
+.#{$card-classname} {
+    background-color: $card-background;
+    border-radius: $card-border-radius;
+    height: 100%;
+    &--flat {
+        border: 1px solid $card-border-color;
+        box-shadow: none;
+        &.#{$card-classname}--active {
+            transition: box-shadow $global-transition-speed-medium $global-transition-function;
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $global-box-shadow-xs;
+            }
+        }
+    }
+    &--raised {
+        box-shadow: $global-box-shadow-sm;
+        &.#{$card-classname}--active {
+            transition: box-shadow $global-transition-speed-medium $global-transition-function;
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $global-box-shadow-lg;
+            }
+        }
+    
+    }
+    &__content {
+        padding: rem($global-module * 2);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__section {
+        border-top: 1px solid $card-divider-color;
+    }
+    &__footer {
+        padding-top: rem($global-module * 2);
+        padding-left: rem($global-module * 2);
+        border-top: 1px solid $card-divider-color;
+        display: flex;
+        flex-wrap: wrap;
+        a {
+            margin-bottom: rem($global-module * 2);
+            margin-right: rem($global-module * 2);
+        }
+    }
+}

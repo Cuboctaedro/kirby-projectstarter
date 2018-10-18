@@ -1,0 +1,57 @@
+/*  =========================================================================
+    TOPBAR
+    ========================================================================= */
+
+
+$topbar-height : $global-module * 6 ;
+$topbar-background : $global-brand-color;
+$topbar-color : contrast-switch($topbar-background);
+$topbar-logo-size: $global-module * 20 ;
+
+.c-topbar {
+    width:100%;
+    display: flex;
+    height: rem($topbar-height);
+    &--raised {
+        box-shadow: $global-box-shadow-sm;
+        z-index:100; 
+    }
+    &--fixed {
+        position: fixed;
+        top: 0;
+    }
+    @at-root .has-topbar-fixed {
+        position: relative;
+        padding-top: rem($topbar-height * 2);
+    }
+    &__item {
+        height: rem($topbar-height);
+    }
+    &--solid {
+        background-color: $topbar-background;
+        color: $topbar-color;
+    }
+    &--solid &__item {
+        color: $topbar-color;
+    }
+    &__logo {
+        @include margin(null rem($global-module * 2));
+        width: rem(118px);
+        height: rem(180px);
+        background-color: $global-background-color;
+        background-position: center;
+        background-size: cover;
+        box-shadow: $global-box-shadow-md;
+        & > a {
+            display: block;
+            width:100%;
+            height:100%;
+            @include hide-text;
+        }
+    }
+    @at-root .has-topbar-logo {
+        position: relative;
+        padding-top: rem(200px);
+    }
+
+}

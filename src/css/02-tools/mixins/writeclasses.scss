@@ -1,0 +1,56 @@
+@mixin writeClasses($property, $settings, $torem: false) {
+
+    @each $key, $value in _get($settings, 'values') {
+
+        .#{_get($settings, 'class')}#{$key} {
+            @if $torem == true {
+                #{$property}: rem($value);
+            } @else {
+                #{$property}: $value;
+            }
+        }
+    
+    }
+
+    @if _get($settings, 'responsive') == true {
+
+        @each $querykey, $queryval in $global-media-queries {
+
+            @media screen and (min-width: em(#{$queryval}))  {
+
+                @each $key, $value in _get($settings, 'values') {
+
+                    .#{_get($settings, 'class')}#{$key}#{$querykey} {
+                        @if $torem == true {
+                            #{$property}: rem($value);
+                        } @else {
+                            #{$property}: $value;
+                        }
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    @if _get($settings, 'hover') == true {
+
+        @each $key, $value in _get($settings, 'values') {
+
+            .#{_get($settings, 'class')}#{$key}#{$global-hover-identifier}:hover,
+            .#{_get($settings, 'class')}#{$key}#{$global-hover-identifier}:focus {
+                @if $torem == true {
+                    #{$property}: rem($value);
+                } @else {
+                    #{$property}: $value;
+                }
+            }
+        
+        }
+
+    }
+
+}

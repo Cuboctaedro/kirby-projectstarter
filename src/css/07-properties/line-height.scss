@@ -1,0 +1,25 @@
+/*  =========================================================================
+    LINE HEIGHT
+    ========================================================================= */
+
+$local-line-height-settings: (
+    'responsive' : true,
+    'hover'      : false,
+    'classname'  : 'line-height-',
+    'values': (
+        '20'      : 20px,
+        '25'      : 25px,
+        '30'      : 30px,
+        '35'      : 35px,
+        '40'      : 40px,
+        '45'      : 45px    
+    )
+);
+
+@if global_variable_exists(global-line-height-settings) {
+
+    $line-height-settings: map-merge($local-line-height-settings, $global-line-height-settings);
+
+    @include writeClasses('line-height', $line-height-settings);
+
+}

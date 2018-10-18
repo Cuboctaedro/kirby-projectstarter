@@ -1,0 +1,377 @@
+/*  =========================================================================
+    GRID
+    ========================================================================= */
+
+$grid-classname: o-grid;
+$grid-widths: (
+    1of6 : 16.6666%,
+    1of4 : 25%,
+    1of3 : 33.3333%,
+    1of2 : 50%,
+    2of3 : 66.6666%,
+    3of4 : 75%,
+    5of6 : 83.3333%,
+    full : 100%
+);
+
+@each $key, $value in $grid-widths {
+
+    .#{$grid-classname}-#{$key} {
+        width: $value;
+    }
+
+}
+
+@include mq($from: mobile) {
+    @each $key, $value in $grid-widths {
+
+        .#{$grid-classname}-#{$key}-#{$global-mobile-postfix} {
+            width: $value;
+        }
+    
+    }
+}
+
+@include mq($from: tablet) {
+    @each $key, $value in $grid-widths {
+
+        .#{$grid-classname}-#{$key}-#{$global-tablet-postfix} {
+            width: $value;
+        }
+    
+    }
+}
+
+@include mq($from: laptop) {
+    @each $key, $value in $grid-widths {
+
+        .#{$grid-classname}-#{$key}-#{$global-laptop-postfix} {
+            width: $value;
+        }
+    
+    }
+}
+
+@include mq($from: desktop) {
+    @each $key, $value in $grid-widths {
+
+        .#{$grid-classname}-#{$key}-#{$global-desktop-postfix} {
+            width: $value;
+        }
+    
+    }
+}
+
+
+.o-col-1 {
+    width: 1/3 * 100%;
+    @include mq($from: mobile) {
+        width: 1/4 * 100%;
+    }
+    @include mq($from: tablet) {
+        width: 1/6 * 100%;
+    }
+    @include mq($from: laptop) {
+        width: 1/9 * 100%;
+    }
+    @include mq($from: desktop) {
+        width: 1/12 * 100%;
+    }
+}
+.o-col-2 {
+    width: 2/3 * 100%;
+    @include mq($from: mobile) {
+        width: 2/4 * 100%;
+    }
+    @include mq($from: tablet) {
+        width: 2/6 * 100%;
+    }
+    @include mq($from: laptop) {
+        width: 2/9 * 100%;
+    }
+    @include mq($from: desktop) {
+        width: 2/12 * 100%;
+    }
+}
+.o-col-3 {
+    width: 100%;
+    @include mq($from: mobile) {
+        width: 3/4 * 100%;
+    }
+    @include mq($from: tablet) {
+        width: 3/6 * 100%;
+    }
+    @include mq($from: laptop) {
+        width: 3/9 * 100%;
+    }
+    @include mq($from: desktop) {
+        width: 3/12 * 100%;
+    }
+}
+.o-col-4 {
+    width: 100%;
+    @include mq($from: tablet) {
+        width: 4/6 * 100%;
+    }
+    @include mq($from: laptop) {
+        width: 4/9 * 100%;
+    }
+    @include mq($from: desktop) {
+        width: 4/12 * 100%;
+    }
+}
+.o-col-5 {
+    width: 100%;
+    @include mq($from: tablet) {
+        width: 5/6 * 100%;
+    }
+    @include mq($from: laptop) {
+        width: 5/9 * 100%;
+    }
+    @include mq($from: desktop) {
+        width: 5/12 * 100%;
+    }
+}
+.o-col-6 {
+    width: 100%;
+    @include mq($from: laptop) {
+        width: 6/9 * 100%;
+    }
+    @include mq($from: desktop) {
+        width: 6/12 * 100%;
+    }
+}
+.o-col-7 {
+    width: 100%;
+    @include mq($from: laptop) {
+        width: 7/9 * 100%;
+    }
+    @include mq($from: desktop) {
+        width: 7/12 * 100%;
+    }
+}
+.o-col-8 {
+    width: 100%;
+    @include mq($from: laptop) {
+        width: 8/9 * 100%;
+    }
+    @include mq($from: desktop) {
+        width: 8/12 * 100%;
+    }
+}
+.o-col-9 {
+    width: 100%;
+    @include mq($from: desktop) {
+        width: 9/12 * 100%;
+    }
+}
+.o-col-10 {
+    width: 100%;
+    @include mq($from: desktop) {
+        width: 10/12 * 100%;
+    }
+}
+.o-col-11 {
+    width: 100%;
+    @include mq($from: desktop) {
+        width: 11/12 * 100%;
+    }
+}
+.o-col-1-\@mob {
+    @include mq($from: mobile) {
+        width: 1/4 * 100%;
+    }
+    @include mq($from: tablet) {
+        width: 1/6 * 100%;
+    }
+    @include mq($from: laptop) {
+        width: 1/9 * 100%;
+    }
+    @include mq($from: desktop) {
+        width: 1/12 * 100%;
+    }
+}
+.o-col-2-\@mob {
+    @include mq($from: mobile) {
+        width: 2/4 * 100%;
+    }
+    @include mq($from: tablet) {
+        width: 2/6 * 100%;
+    }
+    @include mq($from: laptop) {
+        width: 2/9 * 100%;
+    }
+    @include mq($from: desktop) {
+        width: 2/12 * 100%;
+    }
+}
+.o-col-3-\@mob {
+    @include mq($from: mobile) {
+        width: 3/4 * 100%;
+    }
+    @include mq($from: tablet) {
+        width: 3/6 * 100%;
+    }
+    @include mq($from: laptop) {
+        width: 3/9 * 100%;
+    }
+    @include mq($from: desktop) {
+        width: 3/12 * 100%;
+    }
+}
+.o-col-1-\@tab {
+    @include mq($from: tablet) {
+        width: 1/6 * 100%;
+    }
+    @include mq($from: laptop) {
+        width: 1/9 * 100%;
+    }
+    @include mq($from: desktop) {
+        width: 1/12 * 100%;
+    }
+}
+.o-col-2-\@tab {
+    @include mq($from: tablet) {
+        width: 2/6 * 100%;
+    }
+    @include mq($from: laptop) {
+        width: 2/9 * 100%;
+    }
+    @include mq($from: desktop) {
+        width: 2/12 * 100%;
+    }
+}
+.o-col-3-\@tab {
+    @include mq($from: tablet) {
+        width: 3/6 * 100%;
+    }
+    @include mq($from: laptop) {
+        width: 3/9 * 100%;
+    }
+    @include mq($from: desktop) {
+        width: 3/12 * 100%;
+    }
+}
+.o-col-4-\@tab {
+    @include mq($from: tablet) {
+        width: 4/6 * 100%;
+    }
+    @include mq($from: laptop) {
+        width: 4/9 * 100%;
+    }
+    @include mq($from: desktop) {
+        width: 4/12 * 100%;
+    }
+}
+.o-col-5-\@tab {
+    @include mq($from: tablet) {
+        width: 5/6 * 100%;
+    }
+    @include mq($from: laptop) {
+        width: 5/9 * 100%;
+    }
+    @include mq($from: desktop) {
+        width: 5/12 * 100%;
+    }
+}
+.o-col-1-\@lap {
+    @include mq($from: laptop) {
+        width: 1/9 * 100%;
+    }
+    @include mq($from: desktop) {
+        width: 1/12 * 100%;
+    }
+}
+.o-col-2-\@lap {
+    @include mq($from: laptop) {
+        width: 2/9 * 100%;
+    }
+    @include mq($from: desktop) {
+        width: 2/12 * 100%;
+    }
+}
+.o-col-3-\@lap {
+    @include mq($from: laptop) {
+        width: 3/9 * 100%;
+    }
+    @include mq($from: desktop) {
+        width: 3/12 * 100%;
+    }
+}
+.o-col-4-\@lap {
+    @include mq($from: laptop) {
+        width: 4/9 * 100%;
+    }
+    @include mq($from: desktop) {
+        width: 4/12 * 100%;
+    }
+}
+.o-col-5-\@lap {
+    @include mq($from: laptop) {
+        width: 5/9 * 100%;
+    }
+    @include mq($from: desktop) {
+        width: 5/12 * 100%;
+    }
+}
+.o-col-6-\@lap {
+    @include mq($from: laptop) {
+        width: 6/9 * 100%;
+    }
+    @include mq($from: desktop) {
+        width: 6/12 * 100%;
+    }
+}
+.o-col-7-\@lap {
+    @include mq($from: laptop) {
+        width: 7/9 * 100%;
+    }
+    @include mq($from: desktop) {
+        width: 7/12 * 100%;
+    }
+}
+.o-col-8-\@lap {
+    @include mq($from: laptop) {
+        width: 8/9 * 100%;
+    }
+    @include mq($from: desktop) {
+        width: 8/12 * 100%;
+    }
+}
+@include mq($from: desktop) {
+    .o-col-1-\@desk {
+        width: 1/12 * 100%;
+    }
+    .o-col-2-\@desk {
+        width: 2/12 * 100%;
+    }
+    .o-col-3-\@desk {
+        width: 3/12 * 100%;
+    }
+    .o-col-4-\@desk {
+        width: 4/12 * 100%;
+    }
+    .o-col-5-\@desk {
+        width: 5/12 * 100%;
+    }
+    .o-col-6-\@desk {
+        width: 6/12 * 100%;
+    }
+    .o-col-7-\@desk {
+        width: 7/12 * 100%;
+    }
+    .o-col-8-\@desk {
+        width: 8/12 * 100%;
+    }
+    .o-col-9-\@desk {
+        width: 9/12 * 100%;
+    }
+    .o-col-10-\@desk {
+        width: 10/12 * 100%;
+    }
+    .o-col-11-\@desk {
+        width: 11/12 * 100%;
+    }
+
+}
+

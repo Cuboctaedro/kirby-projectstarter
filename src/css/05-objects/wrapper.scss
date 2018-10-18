@@ -1,0 +1,25 @@
+/*  =========================================================================
+    WRAPPER
+    ========================================================================= */
+
+
+
+.o-wrapper {
+    margin-left:auto;
+    margin-right:auto;
+    width:100%;
+    max-width: rem($global-wrapper-width-smallest);
+    @include mq($from: mobile) {
+        max-width: rem($global-wrapper-width-phone);
+    }
+    @include mq($from: tablet) {
+        max-width: rem($global-wrapper-width-tablet);
+    }
+    @include mq($from: laptop) {
+        max-width: rem($global-wrapper-width-laptop);
+    }
+    @include mq($from: desktop) {
+        max-width: rem($global-wrapper-width-desktop);
+    }
+}
+

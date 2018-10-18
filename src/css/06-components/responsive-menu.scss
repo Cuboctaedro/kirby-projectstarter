@@ -1,0 +1,47 @@
+
+$resp-menu-breakpoint: laptop;
+$resp-menu-height: $global-module * 6;
+
+.c-resp-menu {
+    display: flex;
+    &__list {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        height: 0;
+        overflow: hidden;
+        &.visible {
+            height:auto;
+            box-shadow: $global-box-shadow-md;
+            top: rem($resp-menu-height);
+            left:10%;
+            right:10%;
+        }
+        @include mq($from: $resp-menu-breakpoint) {
+            position: static;
+            flex-direction: row;
+            height: rem($resp-menu-height);
+            box-shadow: none;
+            overflow: visible;
+        }
+    }
+    &__item {
+        height: rem($resp-menu-height);
+        width:100%;
+        & > a {
+            height:100%;
+            width:100%;
+            line-height: rem($resp-menu-height);
+        }
+        @include mq($from: $resp-menu-breakpoint) {
+            width: auto;
+        }
+    }
+    &__button {
+        line-height: rem($resp-menu-height);
+        height: rem($resp-menu-height);
+        @include mq($from: $resp-menu-breakpoint) {
+            display: none;
+        }
+    }
+}

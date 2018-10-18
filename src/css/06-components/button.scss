@@ -1,0 +1,115 @@
+/*  =========================================================================
+    BUTTON
+    ========================================================================= */
+
+
+$button-classname : c-button ;
+$button-height: $global-module * 5 ;
+
+$button-padding: $global-module * 2 ;
+
+$button-color: $global-brand-color;
+
+$button-font-size: $global-font-size-md;
+$button-font-family: $global-font-family-titles;
+
+$button-text-hover-background: $global-link-hover-background;
+$button-outline-inverted-color: $global-background-color;
+$button-outline-text-color: $global-text-color;
+
+$button-border-style: $global-border-style;
+$button-border-width: $global-border-width-md;
+
+$button-uppercase: true;
+
+
+
+
+.#{$button-classname} {
+    display: inline-block;
+    font-size: rem($button-font-size);
+    font-family: $button-font-family;
+    @if $button-uppercase == true {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    line-height: rem($button-height);
+    white-space: nowrap;
+    height: rem($button-height);
+    padding-left: rem($button-padding);
+    padding-right: rem($button-padding);
+    &--text {
+        color: $button-color;
+        background-color: none;
+        transition: background-color $global-transition-speed-medium $global-transition-function;
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $button-text-hover-background;
+        }
+    }
+    &--outline {
+        color: $button-color;
+        border: $button-border-width $button-border-style $button-color;
+        background-color: $global-background-color;
+        transition: 
+            border-color $global-transition-speed-medium $global-transition-function, 
+            color $global-transition-speed-medium $global-transition-function;
+        &:hover,
+        &:focus,
+        &:active {
+            color: tint($button-color, 25%);
+            border-color: tint($button-color, 25%);
+        }
+    }
+    &--outline-inverted {
+        color: $button-outline-inverted-color;
+        border: $button-border-width $button-border-style $button-outline-inverted-color;
+        background-color: transparent;
+        transition: 
+            border-color $global-transition-speed-medium $global-transition-function, 
+            color $global-transition-speed-medium $global-transition-function;
+        &:hover,
+        &:focus,
+        &:active {
+            color: shade($button-outline-inverted-color, 7%);
+            border-color: shade($button-outline-inverted-color, 7%);
+        }
+    }
+    &--outline-black {
+        color: $button-outline-text-color;
+        border: $button-border-width $button-border-style $button-outline-text-color;
+        background-color: transparent;
+        transition: 
+            border-color $global-transition-speed-medium $global-transition-function, 
+            color $global-transition-speed-medium $global-transition-function;
+        &:hover,
+        &:focus,
+        &:active {
+            color: tint($button-outline-text-color, 17%);
+            border-color: tint($button-outline-text-color, 17%);
+        }
+    }
+    &--solid {
+        background-color: $button-color;
+        color: $global-background-color;
+        transition: background-color $global-transition-speed-medium $global-transition-function;
+        &:hover {
+            background-color: tint($button-color, 15%);
+        }
+    }
+    &--raised {
+        box-shadow: $global-box-shadow-xs;
+        transition: box-shadow $global-transition-speed-medium $global-transition-function;
+        &:hover,
+        &:focus,
+        &:active {
+            box-shadow: $global-box-shadow-sm;
+        }
+    }
+    &-has-icon {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

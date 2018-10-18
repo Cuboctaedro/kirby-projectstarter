@@ -1,0 +1,37 @@
+/*  =========================================================================
+    DROPDOWN
+    ========================================================================= */
+
+
+$dropdown-background: $global-background-color;
+$dropdown-padding: $global-module * 2;
+$dropdown-color: shade($global-brand-color , 70%);
+$dropdown-hover-background: tint($global-brand-color , 70%);
+$dropdown-shadow: $global-box-shadow-sm;
+
+
+.c-dropdown {
+    &__button {
+        width: 100%;
+    }
+    &__content {
+        background-color: $dropdown-background;
+        box-shadow: $dropdown-shadow;
+        a {
+            display: block;
+            padding: rem($dropdown-padding);
+            background-color: $dropdown-background;
+            border-bottom: 1px solid shade($dropdown-background, 20%);
+            color: $dropdown-color;
+            transition: background-color $global-transition-speed-medium $global-transition-function;
+            &:hover {
+                background-color: $dropdown-hover-background;
+            }
+        }
+        li:last-child a {
+            border-bottom: none;
+        }
+    }
+}
+
+
