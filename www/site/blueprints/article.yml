@@ -40,11 +40,6 @@ fields:
     type: user
   line-c:
     type: line
-  summary:
-    extends: plaintext
-    label: Summary
-  line-d:
-    type: line
   contentblocks:
     label: Content Blocks
     type: builder
