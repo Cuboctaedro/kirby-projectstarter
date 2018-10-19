@@ -16,7 +16,7 @@
 
         @each $querykey, $queryval in $global-media-queries {
 
-            @media screen and (min-width: em(#{$queryval}))  {
+            @media screen and (min-width: em($queryval))  {
 
                 @each $key, $value in _get($settings, 'values') {
 
@@ -40,8 +40,8 @@
 
         @each $key, $value in _get($settings, 'values') {
 
-            .#{_get($settings, 'class')}#{$key}#{$global-hover-identifier}:hover,
-            .#{_get($settings, 'class')}#{$key}#{$global-hover-identifier}:focus {
+            .#{_get($settings, 'class')}#{$key}#{$global-hover-postfix}:hover,
+            .#{_get($settings, 'class')}#{$key}#{$global-hover-postfix}:focus {
                 @if $torem == true {
                     #{$property}: rem($value);
                 } @else {

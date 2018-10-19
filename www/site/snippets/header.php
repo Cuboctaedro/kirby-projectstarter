@@ -6,7 +6,7 @@
     <title><?= $page->title() ?> | <?= $site->title() ?></title>
     <?php snippet('meta') ?>
     <meta name="robots" content="index, follow" />
-    <meta property="fb:pages" content="" />
+
     <link rel="canonical" href="<?= $page->url() ?>"/>
     <?php foreach($site->languages as $lang): ?>
         <?php if ($lang != site()->language() ): ?>

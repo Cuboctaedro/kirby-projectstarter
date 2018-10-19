@@ -65,18 +65,19 @@ $mq-breakpoints: (
     desktop: 1240px
 );
 
-$global-mobile-postfix: \@mob;
-$global-tablet-postfix: \@tab;
-$global-laptop-postfix: \@lap;
-$global-desktop-postfix: \@desk;
+$global-mobile-postfix: -\@mob;
+$global-tablet-postfix: -\@tab;
+$global-laptop-postfix: -\@lap;
+$global-desktop-postfix: -\@desk;
 
 $global-media-queries: (
-    '\@mob': _get($mq-breakpoints, 'mobile'),
-    '\@tab': _get($mq-breakpoints, 'tablet'),
-    '\@lap': _get($mq-breakpoints, 'laptop'),
-    '\@desk': _get($mq-breakpoints, 'desktop')
+    -\@mob: _get($mq-breakpoints, 'mobile'),
+    -\@tab: _get($mq-breakpoints, 'tablet'),
+    -\@lap: _get($mq-breakpoints, 'laptop'),
+    -\@desk: _get($mq-breakpoints, 'desktop')
 );
 
+$global-hover-postfix: --hover;
 
 $global-wrapper-width-smallest: 336px;
 $global-wrapper-width-phone: 384px;
@@ -98,17 +99,6 @@ $global-warning-color: #FFBD2B;
 $global-danger-color: #DE3416;
 $global-success-color: #35BD36;
 
-
-// Bourbon
-
-$bourbon: (
-    "contrast-switch-dark-color": $global-text-color,
-    "contrast-switch-light-color": $global-background-color,
-    "global-font-file-formats": ("ttf", "woff2", "woff"),
-    "modular-scale-base": 10px,
-    "modular-scale-ratio": $major-third,
-    "rails-asset-pipeline": false,
-);
 
 
 // Typography

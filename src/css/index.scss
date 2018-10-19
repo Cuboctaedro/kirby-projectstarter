@@ -2,7 +2,6 @@
 
 // 0. Vendor
 @import "../../node_modules/sassdash/_index.scss";
-@import "bourbon";
 @import "00-vendor/mediaqueries";
 
 // 1. Settings
@@ -60,38 +59,38 @@
 
 // 7. Utilities
 
-@import "07-utilities/background-color";
-@import "07-utilities/background-position";
-@import "07-utilities/background-repeat";
-@import "07-utilities/background-size";
-@import "07-utilities/border-color";
-@import "07-utilities/border-style";
-@import "07-utilities/border-width";
-@import "07-utilities/box-shadow";
-@import "07-utilities/clear";
-@import "07-utilities/color";
-@import "07-utilities/display";
-@import "07-utilities/flex";
-@import "07-utilities/float";
-@import "07-utilities/font-family";
-@import "07-utilities/font-size";
-@import "07-utilities/font-style";
-@import "07-utilities/font-variant";
-@import "07-utilities/font-weight";
+@import "07-properties/background-color";
+@import "07-properties/background-position";
+@import "07-properties/background-repeat";
+@import "07-properties/background-size";
+@import "07-properties/border-color";
+@import "07-properties/border-style";
+@import "07-properties/border-width";
+@import "07-properties/box-shadow";
+@import "07-properties/clear";
+@import "07-properties/color";
+@import "07-properties/display";
+@import "07-properties/flex";
+@import "07-properties/float";
+@import "07-properties/font-family";
+@import "07-properties/font-size";
+@import "07-properties/font-style";
+@import "07-properties/font-variant";
+@import "07-properties/font-weight";
 
-@import "07-utilities/letter-spacing";
-@import "07-utilities/line-height";
-@import "07-utilities/margin";
+@import "07-properties/letter-spacing";
+@import "07-properties/line-height";
+@import "07-properties/margin";
 
 
-@import "07-utilities/opacity";
-@import "07-utilities/order";
-@import "07-utilities/overflow";
-@import "07-utilities/padding";
-@import "07-utilities/position";
-@import "07-utilities/text-align";
-@import "07-utilities/text-decoration";
-@import "07-utilities/text-transform";
+@import "07-properties/opacity";
+@import "07-properties/order";
+@import "07-properties/overflow";
+@import "07-properties/padding";
+@import "07-properties/position";
+@import "07-properties/text-align";
+@import "07-properties/text-decoration";
+@import "07-properties/text-transform";
 
 
 // 8. Javascript
